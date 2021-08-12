@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+       <img alt="logo" id="header_logo" height="40" float-left src="assets/icon/logo.png"> ¡Bienvenidos!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-buttons>
+  <ion-button (click)="toggleMenu()">
+    <ion-icon slot="icon-only" name="menu"></ion-icon>
+  </ion-button>
+</ion-buttons>
+
+<ion-content padding class="getting-started">
+  <ion-card>
+    <b>FUNDACIÓN SANTO DOMINGO DE GUZMÁN</b>
+ 
+      <ion-button [routerLink]="['/posts']" routerDirection="forward" expand="full">Salud Mental</ion-button>
+      <ion-button (click)="goToPagina1()" routerDirection="forward" expand="full">Nutrición</ion-button>
+      <ion-button (click)="goToPagina3()" routerDirection="forward" expand="full">Salud y Belleza</ion-button>
+      <ion-button (click)="goToPagina4()" routerDirection="forward" expand="full">Bienestar Fisico</ion-button>
+      <ion-button (click)="goToPagina5()" routerDirection="forward" expand="full">Ir a Enfermedades</ion-button>
+      <ion-button (click)="goToPagina6()" routerDirection="forward" expand="full">Ir a Blog</ion-button>
+      <ion-button (click)="goToPagina7()" routerDirection="forward" expand="full">Ir a Contactos</ion-button>
+      <ion-button (click)="goToPagina8()" routerDirection="forward" expand="full">Ir a Acerca De</ion-button>
+    
+  </ion-card>
+</ion-content>
+<ion-router-outlet id="principal"></ion-router-outlet>
+
+<ion-app>
+  <ion-menu side="start" 
+  menuId="first" 
+  contentId="principal">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+       <p>           </p>
+       <p>           </p>
+       <p>           </p>
+        <ion-item><ion-button (click)="goToPagina2()" routerDirection="forward">Ir a Enfermedades</ion-button></ion-item>
+        <ion-item><ion-button (click)="goToPagina1()" routerDirection="forward">Ir a Blog</ion-button></ion-item>
+        <ion-item><ion-button (click)="goToPagina3()" routerDirection="forward">Ir a Contactos</ion-button></ion-item>
+        <ion-item><ion-button (click)="goToPagina4()" routerDirection="forward">Ir a Acerca De</ion-button></ion-item>
+       
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="principal"></ion-router-outlet>
+</ion-app>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+</ion-fab>
